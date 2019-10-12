@@ -1,0 +1,31 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nik: 1
+  nationality: MyString
+  birth_date: 2019-10-12
+  address: MyText
+  martial_status: 1
+  gender: MyString
+  rt: 1
+  rw: 1
+  district: MyString
+  regional: MyString
+  religion: MyString
+  image_identity_card: MyString
+  occupation: MyString
+
+two:
+  nik: 1
+  nationality: MyString
+  birth_date: 2019-10-12
+  address: MyText
+  martial_status: 1
+  gender: MyString
+  rt: 1
+  rw: 1
+  district: MyString
+  regional: MyString
+  religion: MyString
+  image_identity_card: MyString
+  occupation: MyString
