@@ -24,8 +24,16 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
-gem 'dotenv-rails'
+
+# implement serializer active models
+gem 'active_model_serializers', '0.10.10'
+
+# .env file for  secret keys
+gem 'dotenv-rails', '2.7.5'
+
+# hirb console with table views
 gem 'hirb', '~> 0.7.3'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -1,6 +1,17 @@
 Rails.application.routes.draw do
-  resources :provinces
-  resources :cities
-  resources :identities
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  namespace :api do
+    namespace :v1 do
+      resources :identities do
+        collection do
+          get :search_identity
+        end
+      end
+
+      resources :passports do
+        collection do
+          get :search_passport
+        end
+      end
+    end
+  end
 end
