@@ -1,0 +1,2 @@
+class UrbanVillage < ApplicationRecord
+end
