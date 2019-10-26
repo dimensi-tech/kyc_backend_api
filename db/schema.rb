@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_26_035145) do
+ActiveRecord::Schema.define(version: 2019_10_26_063120) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,8 +36,6 @@ ActiveRecord::Schema.define(version: 2019_10_26_035145) do
     t.string "nik"
     t.string "nationality"
     t.string "gender"
-    t.string "district"
-    t.string "regional"
     t.string "religion"
     t.string "image_identity_card"
     t.string "occupation"
@@ -51,6 +49,8 @@ ActiveRecord::Schema.define(version: 2019_10_26_035145) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "birth_place"
+    t.integer "urban_village_id"
+    t.integer "district_id"
   end
 
   create_table "passports", force: :cascade do |t|
