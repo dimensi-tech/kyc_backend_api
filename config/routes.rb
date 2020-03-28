@@ -4,6 +4,7 @@ Rails.application.routes.draw do
       resources :identities do
         collection do
           get :search_identity
+          get :find_identity
         end
       end
 

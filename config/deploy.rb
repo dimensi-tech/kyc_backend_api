@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # config valid for current version and patch releases of Capistrano
 lock '~> 3.11.1'
 
@@ -5,9 +7,10 @@ set :application, 'kyc_backend_api'
 set :repo_url, 'git@github.com:dimensi-tech/kyc_backend_api.git'
 set :deploy_to, '/home/deploy/apps/kyc_backend_api'
 set :branch, 'master'
-append :linked_files, 'config/database.yml', 'config/secrets.yml', '.env'
-append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads'
 set :assets_roles, []
+append :linked_files, 'config/database.yml', 'config/secrets.yml', '.env'
+append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets',
+       'vendor/bundle', 'public/system', 'public/uploads'
 
 namespace :puma do
   desc 'Create Directories for Puma Pids and Socket'

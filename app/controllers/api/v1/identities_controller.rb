@@ -12,6 +12,15 @@ module Api
         end
       end
 
+      def find_identity
+        identity = Identity.find(params[:id])
+        if identity.present?
+          render json: identity
+        else
+          render json: { success: false, message: 'Identity is not available' }
+        end
+      end
+
       private
 
       def set_identity
