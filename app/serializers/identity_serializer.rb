@@ -3,7 +3,7 @@
 class IdentitySerializer < ActiveModel::Serializer
   attributes :id, :name, :nik, :nationality, :gender, :district_name, :religion,
              :image_identity_card, :occupation, :birth_date, :address, :rt, :rw,
-             :city_id, :province_id, :martial_status, :vilage_name
+             :city_name, :province_name, :martial_status, :vilage_name
 
   def district_name
     object.district.name
@@ -13,6 +13,18 @@ class IdentitySerializer < ActiveModel::Serializer
 
   def vilage_name
     object.urban_village.name
+  rescue StandardError
+    ''
+  end
+
+  def city_name
+    object.city.name
+  rescue StandardError
+    ''
+  end
+
+  def province_name
+    object.province.name
   rescue StandardError
     ''
   end
