@@ -11,6 +11,7 @@ Rails.application.routes.draw do
       resources :passports do
         collection do
           get :search_passport
+          get :find_passport
         end
       end
     end

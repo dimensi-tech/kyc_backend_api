@@ -11,6 +11,15 @@ module Api
         end
       end
 
+      def find_passport
+        passport = Passport.find(params[:id])
+        if passport.present?
+          render json: passport
+        else
+          render json: { success: false, message: 'Passport is not available' }
+        end
+      end
+
       private
 
       def set_passport
