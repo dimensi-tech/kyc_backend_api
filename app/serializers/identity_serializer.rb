@@ -3,7 +3,7 @@
 class IdentitySerializer < ActiveModel::Serializer
   attributes :id, :name, :nik, :nationality, :gender, :district_name, :religion,
              :image_identity_card, :occupation, :birth_date, :address, :rt, :rw,
-             :city_name, :province_name, :martial_status, :vilage_name
+             :city_name, :province_name, :martial_status, :vilage_name, :birth_place
 
   def district_name
     object.district.name
