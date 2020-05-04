@@ -12,7 +12,11 @@ module Api
       end
 
       def find_passport
-        passport = Identity.find(params[:id]).passports.last
+        if params.dig(:child).present?
+          passport = Passport.find(params[:id])
+        else
+          passport = Identity.find(params[:id]).passports.last
+        end
         if passport.present?
           render json: passport
         else
